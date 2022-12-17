@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    <title>Вопросики</title>
+
+{% endblock %}
+
+{% block content %}
+
+		<h2 style="color:#774C3D;">Опрос</h2>
+		<form class="container" action="/process">
+			<h4 style="color:#774C3D;font-style:oblique;">Анкета .⋆｡⋆☂˚｡⋆｡˚☽˚｡⋆..⋆｡⋆☂˚｡⋆｡˚☽˚｡⋆.</h4>
+			<div class="row">
+				<div class="col-md-4" style="color:#774C3D;">Укажите, пожалуйста, свой возраст:</div>
+				<div class="col-md-4"><input type="number" name="age"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-4" style="color:#774C3D;">И гендер:</div>
+				<select name="gender" class="col-md-4">
+					<option value="male">m</option>
+					<option value="female">f</option>
+					<option value="other">nb</option>
+					<option value="other">–</option>
+				</select>
+			</div>
+			<div class="row">
+				<div class="col-md-4" style="color:#774C3D;">И еще ваш уровень образования:</div>
+				<select name="education" class="col-md-4">
+					<option value="kindergarten">детский сад</option>
+					<option value="school_9">9 классов школы</option>
+					<option value="school_11">11 классов школы</option>
+					<option value="college">среднее специальное</option>
+					<option value="student">неоконченное высшее</option>
+					<option value="bachelor">бакалавриат/специалитет</option>
+					<option value="master">магистратура</option>
+					<option value="phd">аспирантура</option>
+					<option value="candidate">кандидат наук</option>
+					<option value="doctor">доктор наук</option>
+				</select>
+			</div>
+			<h4 style="color:#774C3D; font-style:oblique;">Вопросы .⋆｡⋆☂˚｡⋆｡˚☽˚｡⋆..⋆｡⋆☂˚｡⋆｡˚☽˚｡⋆. </h4>
+            {% for question in questions[:2] %}
+			    <div class="row">
+				    <p class="col-md-6">{{question.text}}</p>
+					<table class="col-md-8" style="color:#774C3D; font-style:obloque;">
+						<tr>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=5></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=4></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=3></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=2></td>
+							<td><input class="radio" type="radio" name="q{{ question.id }}" value=1></td>
+						</tr>
+						<tr style="color:#A87B59; font-style:oblique;">
+							<td>всю вселенную</td>
+							<td>соти, дэсан, грэмми</td>
+							<td>все награды с музыкальных шоу</td>
+							<td>больше, чем получил</td>
+							<td>одну</td>
+						</tr>
+					</table>
+			    </div>
+
+            {% endfor %}
+
+			<div class="row">
+				    <p class="col-md-6">{{qu3.text}}</p>
+					<table class="col-md-8">
+						<tr>
+							<td><input class="radio" type="radio" name="q3" value="5"></td>
+							<td><input class="radio" type="radio" name="q3" value="4"></td>
+							<td><input class="radio" type="radio" name="q3" value="3"></td>
+							<td><input class="radio" type="radio" name="q3" value="2"></td>
+							<td><input class="radio" type="radio" name="q3" value="1"></td>
+						</tr>
+						<tr style="color:#A87B59; font-style:oblique;">
+							<td>лучшая песня, ква</td>
+							<td>чон усок в шортиках 10/10</td>
+							<td>песня супер</td>
+							<td>не слушал_а </td>
+							<td>на один раз</td>
+						</tr>
+					</table>
+			    </div>
+
+			<div class="row">
+				<input class="submit" type="submit" name="submit" value="Отправить">
+			</div>
+		</form>
+{% endblock %}

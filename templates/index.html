@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    <title>Согласие</title>
+
+{% endblock %}
+
+{% block content %}
+
+<form action="/questions" method = 'GET'>
+    <fieldset>
+        <legend><b style="color:#774C3D;">Опрос про то, сколько наград K-POP группа PENTAGON заслужила за свои камбеки.</b></legend>
+    <p style="color:RosyBrown; font-style:obloque;">*＊✿❀ послушайте их альбом the black hole, если вы этого еще не сделали, и любите Шинвона ❀✿＊*</p>
+    Готовы ли вы пройти опрос?<br>
+    <input type="radio" name="ask" value="yes" checked>Да!!!<br>
+    <p><input type="submit" value="Летсгоууу"></p>
+    </fieldset>
+</form>
+
+<img src="https://media.tenor.com/0Q0apbb6xy4AAAAC/ko-shinwon-shinwon-go.gif" width="300">
+
+{% endblock %}

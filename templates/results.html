@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+    <title>Статистика по прошедшим опрос</title>
+
+{% endblock %}
+
+{% block content %}
+    <h1 style="color:#774C3D; font-style:obloque;">☆.｡.:* Статистика по прошедшим опрос .｡.:*☆</h1>
+    <table style="color:RosyBrown;">
+        <tr>
+            <td>Средний возраст прошедших опрос</td>
+            <td>{{ all_info['age_mean'] }}</td>
+        </tr>
+        <tr>
+            <td>Минимальный возраст прошедших опрос</td>
+            <td>{{ all_info['age_min'] }}</td>
+        </tr>
+        <tr>
+            <td>Максимальный возраст прошедших опрос</td>
+            <td>{{ all_info['age_max'] }}</td>
+        </tr>
+        <tr>
+            <td>(основываясь на ответе на последний вопрос) большинство людей, прошедших опрос: </td>
+            <td>{{ all_info['q1_mean'] }}</td>
+        </tr>
+        <tr>
+            <td><h4 style="color:#774C3D;"> »»——⍟——«« </h></td>
+        </tr>
+        <tr>
+            <td><h4 style="color:#774C3D;"> Ссылки на нереальнейшие выступления Пентагон всем для ознакомления: </h></td>
+        </tr>
+        <tr>
+            <td><a href="https://youtu.be/SBQ4tUjlKPI" style="color:RosyBrown;"> Dr.Bebe (просто отпадная хореография) </a> </td>
+        </tr>
+        <tr>
+            <td><a href="https://youtu.be/IRAlxyLw05c" style="color:RosyBrown;"> Naughty boy (лягушки!!) </a> </td>
+        </tr>
+        <tr>
+            <td><a href="https://youtu.be/6RM6ejztfSw" style="color:RosyBrown;"> DO or NOT (тут они просто няшки :( ) </a> </td>
+        </tr>
+    </table>
+{% endblock %}
